@@ -1,0 +1,11 @@
+<div *ngFor="let user of users">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{user.username}}</h5>
+                <p class="card-text">{{user.username}}'s' email is {{user.email}}<p>
+                <p class="card-text">{{user.username}}'s' password is {{user.password}}</p>
+                <p class="card-text">{{user.about}}</p>
+                <button type="button" class="btn btn-danger" (click)="deleteUser(user.email)">Delete</button>
+            </div>
+    </div>
+</div>
