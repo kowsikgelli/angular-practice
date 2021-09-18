@@ -13,7 +13,9 @@ export class ShowusersComponent implements OnInit {
   users : User[] = []
   constructor(private userService:UserService) { }
   ngOnInit(): void {
-    this.users = this.userService.getUsers()
+     this.userService.getUsers().subscribe((users)=>{
+       this.users = users
+      })
   }
   deleteUser(email:any){
     this.userService.deleteUser(email)

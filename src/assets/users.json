@@ -1,0 +1,11 @@
+[
+    {
+        "username": "kowsik","email": "abc@gmail.com","password": "asdf","about":"kowsik hello"
+    },
+    {
+        "username":"jai", "email":"jai@gmail.com","password":"jaiksgelli","about":"greedy"
+    },
+    {
+        "username":"bob", "email":"bob@gmail.com","password":"jaiksgelli","about":"greedy"
+    }
+]

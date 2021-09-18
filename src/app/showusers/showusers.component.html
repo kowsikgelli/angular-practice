@@ -1,3 +1,9 @@
+<div>
+<div class="d-flex justify-content-center  container">
+    <h3>User Details</h3><br>
+</div>
+<h4 *ngIf="users.length==0">No Users available</h4>
+
 <div *ngFor="let user of users">
         <div class="card">
             <div class="card-body">
@@ -8,4 +14,5 @@
                 <button type="button" class="btn btn-danger" (click)="deleteUser(user.email)">Delete</button>
             </div>
     </div>
+</div>
 </div>

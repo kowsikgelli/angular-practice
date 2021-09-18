@@ -2,15 +2,18 @@ import { Injectable } from '@angular/core';
 import { Observable,of } from 'rxjs';
 import {User} from './User'
 import {USERS} from './mock-users'
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
+  //url: string = "/assets/users.json"
+  url: string = "http://localhost:5000/showusers"
   name = "service"
-  constructor() { }
-  getUsers(): User[]{
-    return USERS
+  constructor(private http:HttpClient) { }
+  getUsers(): Observable<User[]>{
+    return  this.http.get<User[]>(this.url);
   }
   setUsers(user: any){
     USERS.push(user)
